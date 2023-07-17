@@ -1,0 +1,216 @@
+:root {
+  --text-dark: black;
+  --text-grey: #adbdcc;
+  --text-light: white;
+
+  --purple-1: #6962f7;
+  --purple-2: #7000ff;
+  --blue-1: #00d4ff;
+  --primary-accent: #0a2540;
+  --primary-btn-hover: #6d7a88;
+
+  --bg-white: white;
+  --bg-light: #f7f9fc;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  --heading-font: "Anek Telugu";
+  --body-font: "Roboto", sans-serif;
+
+  --h1-size: 5.875rem;
+  --h1-lheight: 6.75rem;
+  --h2-size: 3.125rem;
+  --h2-lheight: 4.6875rem;
+  --h3-size: 2.5rem;
+  --h4-size: 2rem;
+  --h5-size: 1.75rem;
+  --h6-size: 1.375rem;
+  --p-size: 1.125rem;
+  --p-lheight: 1.625rem;
+  --button-size: 1rem;
+
+  --subtitle-size: 1.0625rem;
+  --subtitle-lheight: 1.625rem;
+  --secondary-text-size: 0.875rem;
+  --secondary-text-lheight: 1.125rem;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: var(--spacing-sm);
+  width: 100%;
+
+  color: var(--text-dark);
+  font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  width: 100%;
+
+  font-family: var(--heading-font);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: 600;
+  letter-spacing: -0.0625rem;
+  line-height: var(--h1-lheight);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  font-weight: 500;
+  letter-spacing: -0.0156rem;
+  line-height: var(--h2-lheight);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: var(--h4-size);
+  font-weight: 500;
+  letter-spacing: 0.0156rem;
+}
+
+h5 {
+  font-size: var(--h5-size);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: var(--h6-size);
+  font-weight: 500;
+}
+
+p {
+  margin: var(--spacing-md) 0;
+
+  font-size: var(--p-size);
+  font-weight: 400;
+  line-height: var(--p-lheight);
+}
+
+a {
+  color: var(--purple-1);
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--primary-accent);
+}
+
+button {
+  border: none;
+
+  font-family: var(--body-font);
+  font-size: var(--button-size);
+  font-weight: bold;
+  letter-spacing: 0.0781rem;
+
+  transition: color 0.15s ease;
+}
+
+.subtitle,
+.subtitle2 {
+  font-family: var(--heading-font);
+  font-size: var(--subtitle-size);
+  font-weight: 500;
+  line-height: var(--subtitle-lheight);
+}
+
+.subtitle {
+  color: var(--purple-1);
+}
+
+.subtitle2 {
+  color: var(--blue-1);
+}
+
+.secondary-text {
+  color: var(--text-grey);
+  font-size: var(--secondary-text-size);
+  letter-spacing: 0.25px;
+  line-height: var(--secondary-text-lheight);
+}
+
+.primary-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+
+  background-color: var(--primary-accent);
+  border-radius: 20px;
+
+  color: var(--text-light);
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  background-color: var(--primary-btn-hover);
+}
+
+.secondary-button {
+  background-color: transparent;
+
+  color: var(--primary-accent);
+}
+
+.secondary-button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.with-icon-blue,
+.with-icon-dark,
+.with-icon-light,
+.with-icon-purple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.with-icon-blue::after,
+.with-icon-dark::after,
+.with-icon-light::after,
+.with-icon-purple::after {
+  line-height: 0; /* Done to remove white space below pseudo-element. */
+
+  transition: transform 0.25s ease;
+}
+
+.with-icon-blue:hover::after,
+.with-icon-dark:hover::after,
+.with-icon-light:hover::after,
+.with-icon-purple:hover::after {
+  transform: translateX(0.25rem);
+}
+
+.with-icon-blue::after {
+  content: url("assets/arrow-right-blue.svg");
+}
+
+.with-icon-dark::after {
+  content: url("assets/arrow-right-dark.svg");
+}
+
+.with-icon-light::after {
+  content: url("assets/arrow-right-light.svg");
+}
+
+.with-icon-purple::after {
+  content: url("assets/arrow-right-purple.svg");
+}

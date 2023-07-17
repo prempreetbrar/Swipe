@@ -17,6 +17,8 @@
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
 
+  --standard-width: 71.5rem;
+
   --heading-font: "Anek Telugu";
   --body-font: "Roboto", sans-serif;
 
@@ -39,6 +41,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   box-sizing: border-box;
   margin: 0;
   padding-top: var(--spacing-sm);
@@ -46,6 +52,19 @@ body {
 
   color: var(--text-dark);
   font-family: var(--body-font);
+
+  background-color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 var(--spacing-md);
+
+  width: 100%;
+  max-width: var(--standard-width);
 }
 
 h1,
@@ -126,6 +145,14 @@ button {
   transition: color 0.15s ease;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  max-width: var(--standard-width);
+}
+
 .subtitle,
 .subtitle2 {
   font-family: var(--heading-font);
@@ -149,13 +176,24 @@ button {
   line-height: var(--secondary-text-lheight);
 }
 
-.primary-button {
+.filled-button {
   padding: var(--spacing-sm) var(--spacing-md);
 
-  background-color: var(--primary-accent);
   border-radius: 20px;
 
   color: var(--text-light);
+}
+
+.navbar-button {
+  background-color: rgba(250, 250, 250, 0.25);
+}
+
+.navbar-button:hover {
+  background: rgba(250, 250, 250, 0.5);
+}
+
+.primary-button {
+  background-color: var(--primary-accent);
 }
 
 .primary-button:hover {
@@ -213,4 +251,24 @@ button {
 
 .with-icon-purple::after {
   content: url("assets/arrow-right-purple.svg");
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+
+  list-style-type: none;
+}
+
+.menu > li {
+  margin: 0 var(--spacing-md);
+}
+
+.menu > li > a {
+  color: var(--text-light);
+  font-weight: bold;
+}
+
+.menu > li:hover > a {
+  text-decoration: underline;
 }

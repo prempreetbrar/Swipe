@@ -12,6 +12,8 @@
   --bg-white: white;
   --bg-light: #f7f9fc;
 
+  --standard-shadow: 0rem 0.125rem 2.5rem rgba(0, 0, 0, 0.15);
+
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
@@ -174,7 +176,7 @@ button {
 .secondary-text {
   color: var(--text-grey);
   font-size: var(--secondary-text-size);
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0156rem;
   line-height: var(--secondary-text-lheight);
 }
 
@@ -359,4 +361,36 @@ button {
 
 .platform button {
   margin: var(--spacing-md) 0;
+}
+
+.graphics {
+  display: grid;
+  grid-gap: var(--spacing-lg);
+  grid-template-areas:
+    "card invoice invoice"
+    "phone invoice invoice"
+    "phone dashboard dashboard";
+
+  padding: var(--spacing-lg) 0;
+}
+
+.graphics img {
+  width: 100%;
+  box-shadow: var(--standard-shadow);
+}
+
+.graphics img:nth-of-type(1) {
+  grid-area: card;
+}
+
+.graphics img:nth-of-type(2) {
+  grid-area: invoice;
+}
+
+.graphics img:nth-of-type(3) {
+  grid-area: phone;
+}
+
+.graphics img:nth-of-type(4) {
+  grid-area: dashboard;
 }

@@ -460,3 +460,15 @@ button:hover {
 
   border-radius: 20px;
 }
+
+.why .card {
+  box-sizing: border-box;
+  padding-right: var(--spacing-sm);
+  margin-right: var(--spacing-md);
+
+  width: 25%;
+}
+
+.why .secondary-text {
+  color: var(--text-dark);
+}

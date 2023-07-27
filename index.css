@@ -26,13 +26,13 @@
 
   --h1-size: 5.875rem;
   --h1-lheight: 6.75rem;
-
   --h2-size: 2.5rem;
-  --h3-size: 0rem;
   --h3-lheight: 4.6875rem;
+  --h3-size: 3.125rem;
   --h4-size: 2rem;
   --h5-size: 1.75rem;
   --h6-size: 1.375rem;
+  --h6-lheight: 2rem;
   --p-size: 1.125rem;
   --p-lheight: 1.625rem;
   --button-size: 1rem;
@@ -121,9 +121,12 @@ h5 {
   font-weight: 500;
 }
 
-h6 {
+h6,
+.card h3 {
   font-size: var(--h6-size);
   font-weight: 500;
+  letter-spacing: -0.0156rem;
+  line-height: var(--h6-lheight);
 }
 
 p {
@@ -155,6 +158,10 @@ button {
   letter-spacing: 0.0781rem;
 
   transition: color 0.15s ease;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .subtitle,
@@ -201,7 +208,6 @@ button {
 }
 
 .primary-button:hover {
-  cursor: pointer;
   background-color: var(--primary-btn-hover);
 }
 
@@ -210,18 +216,34 @@ button {
 }
 
 .primary2-button:hover {
-  cursor: pointer;
   background-color: var(--primary-accent);
 }
 
-.secondary-button {
-  background-color: transparent;
+.primary3-button {
+  background-color: var(--blue-1);
+  color: var(--primary-accent);
+}
 
+.primary3-button:hover {
+  background-color: var(--bg-white);
+}
+
+.secondary-button,
+.secondary2-button {
+  background-color: transparent;
+  padding: 0;
+}
+
+.secondary-button {
   color: var(--purple-2);
 }
 
-.secondary-button:hover {
-  cursor: pointer;
+.secondary2-button {
+  color: var(--blue-1);
+}
+
+.secondary-button:hover,
+.secondary2-button:hover {
   opacity: 0.75;
 }
 
@@ -313,6 +335,27 @@ button {
   padding-left: var(--spacing-md);
 }
 
+.card-container {
+  display: flex;
+  flex-direction: row;
+
+  margin: var(--spacing-lg) 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 0;
+}
+
+.card img {
+  height: 3.125rem;
+  margin-bottom: var(--spacing-sm);
+}
+
 .hero p {
   max-width: 30rem;
 }
@@ -393,4 +436,27 @@ button {
 
 .graphics img:nth-of-type(4) {
   grid-area: dashboard;
+}
+
+.engineers {
+  background-color: var(--primary-accent);
+  color: var(--text-light);
+}
+
+.engineers .card {
+  width: 50%;
+}
+
+.engineers > .two-column > .col-left > button {
+  align-self: flex-start;
+
+  margin-top: var(--spacing-md);
+}
+
+.engineers > .two-column > .col-right > img {
+  margin: var(--spacing-sm) 0;
+
+  max-width: 29.375rem;
+
+  border-radius: 20px;
 }

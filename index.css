@@ -77,6 +77,8 @@ header {
 
 main {
   margin: var(--spacing-xl) 0;
+
+  width: 100%;
 }
 
 h1,
@@ -190,7 +192,7 @@ button:hover {
 .filled-button {
   padding: var(--spacing-sm) var(--spacing-md);
 
-  border-radius: 20px;
+  border-radius: 1.25rem;
 
   color: var(--text-light);
 }
@@ -356,6 +358,17 @@ button:hover {
   margin-bottom: var(--spacing-sm);
 }
 
+.hero-wrapper,
+.partners-wrapper,
+.platform-wrapper,
+.graphics-wrapper,
+.engineers-wrapper,
+.why-wrapper,
+.global-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .hero p {
   max-width: 30rem;
 }
@@ -438,7 +451,8 @@ button:hover {
   grid-area: dashboard;
 }
 
-.engineers {
+.engineers-wrapper,
+.global-wrapper {
   background-color: var(--primary-accent);
   color: var(--text-light);
 }
@@ -447,21 +461,22 @@ button:hover {
   width: 50%;
 }
 
-.engineers > .two-column > .col-left > button {
+.engineers > .col-left > button {
   align-self: flex-start;
 
   margin-top: var(--spacing-md);
 }
 
-.engineers > .two-column > .col-right > img {
+.engineers > .col-right > img {
   margin: var(--spacing-sm) 0;
 
   max-width: 29.375rem;
 
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
-.why .card {
+.why .card,
+.global .card {
   box-sizing: border-box;
   padding-right: var(--spacing-sm);
   margin-right: var(--spacing-md);
@@ -471,4 +486,38 @@ button:hover {
 
 .why .secondary-text {
   color: var(--text-dark);
+}
+
+.global-wrapper {
+  position: relative;
+
+  padding: calc(var(--spacing-xl) * 3);
+}
+
+.global h3 {
+  border-left: 0.125rem solid var(--blue-1);
+  padding-left: var(--spacing-sm);
+
+  line-height: 1.75rem;
+}
+
+.global .card-container {
+  margin-top: calc(var(--spacing-xl) * 2);
+}
+
+.global a {
+  color: var(--blue-1);
+}
+
+.global a:hover {
+  color: var(--text-light);
+}
+
+.global img {
+  position: absolute;
+  top: 7.5%;
+
+  max-width: 55.25rem;
+
+  opacity: 0.25;
 }

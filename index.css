@@ -13,6 +13,14 @@
   --bg-light: #f7f9fc;
 
   --standard-shadow: 0rem 0.125rem 2.5rem rgba(0, 0, 0, 0.15);
+  --standard-radius: 1.25rem;
+  --primary-gradient: linear-gradient(
+    101.33deg,
+    #08209a 0.76%,
+    #6563ff 33.33%,
+    #36c5f0 76.92%,
+    #83e2ff 96.96%
+  );
 
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -192,7 +200,7 @@ button:hover {
 .filled-button {
   padding: var(--spacing-sm) var(--spacing-md);
 
-  border-radius: 1.25rem;
+  border-radius: var(--standard-radius);
 
   color: var(--text-light);
 }
@@ -364,7 +372,8 @@ button:hover {
 .graphics-wrapper,
 .engineers-wrapper,
 .why-wrapper,
-.global-wrapper {
+.global-wrapper,
+.events-wrapper {
   display: flex;
   justify-content: center;
 }
@@ -472,7 +481,7 @@ button:hover {
 
   max-width: 29.375rem;
 
-  border-radius: 1.25rem;
+  border-radius: var(--standard-radius);
 }
 
 .why .card,
@@ -520,4 +529,95 @@ button:hover {
   max-width: 55.25rem;
 
   opacity: 0.25;
+}
+
+.events {
+  padding-top: calc(var(--spacing-xl) * 2);
+}
+
+.events.two-column {
+  align-items: center;
+}
+
+.events button {
+  align-self: flex-start;
+
+  margin-top: var(--spacing-md);
+}
+
+.events .col-left {
+  padding-right: var(--spacing-xl);
+}
+
+.events .col-right {
+  padding: 0;
+
+  width: 33.75rem;
+  height: 27.875rem;
+
+  overflow: hidden;
+  box-shadow: var(--standard-shadow);
+  border-radius: var(--standard-radius);
+}
+
+.events .card-top,
+.events .card-bottom {
+  height: 50%;
+}
+
+.events .card-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.events .card-top::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: -40%;
+  z-index: -1;
+
+  width: 100%;
+  height: 150%;
+
+  background-image: var(--primary-gradient);
+  transform: skewY(-5deg);
+}
+
+.events #swipe-sessions {
+  width: 21.125rem;
+}
+
+.events .avatars {
+  position: absolute;
+  left: var(--spacing-xl);
+  bottom: -4.375rem;
+}
+
+.events .avatars img {
+  width: 5rem;
+}
+
+.events .avatars img:nth-of-type(2) {
+  position: absolute;
+  left: 3.75rem;
+}
+
+.events .card-bottom {
+  box-sizing: border-box;
+  padding: calc(var(--spacing-xl) + var(--spacing-md)) 0 0 var(--spacing-xl);
+}
+
+.events .card-bottom .secondary-text {
+  box-sizing: border-box;
+  padding-right: var(--spacing-md);
+
+  width: 50%;
+
+  color: var(--text-dark);
+  font-weight: 700;
 }

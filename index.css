@@ -82,6 +82,7 @@ header {
   align-items: center;
 
   padding: 0 var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
 }
 
 main {
@@ -442,6 +443,22 @@ button:hover {
   width: 100%;
 }
 
+#canvas {
+  position: absolute;
+  top: -36.5rem;
+  left: -50%;
+  z-index: -1;
+
+  width: 200%;
+  height: 60.625rem;
+
+  --gradient-color-1: #ef008f;
+  --gradient-color-2: #6ec3f4;
+  --gradient-color-3: #7038ff;
+  --gradient-color-4: #ffba27;
+  transform: rotate(-10deg);
+}
+
 .hero p {
   max-width: 30rem;
 }
@@ -530,6 +547,7 @@ button:hover {
 }
 
 .engineers-wrapper::before,
+.engineers-wrapper::after,
 .global-wrapper::before {
   content: "";
   display: block;
@@ -544,6 +562,16 @@ button:hover {
 
   background-color: var(--primary-accent);
   transform: skewY(-10deg);
+}
+
+.engineers-wrapper::before {
+  top: 0;
+  left: 0;
+
+  height: 50%;
+
+  background-color: var(--bg-light);
+  transform: none;
 }
 
 .engineers-wrapper,

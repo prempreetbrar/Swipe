@@ -853,6 +853,17 @@ button:hover {
     width: 100%;
     height: auto;
   }
+
+  .two-column {
+    flex-direction: column;
+  }
+
+  .platform h2,
+  .two-column > .col-left,
+  .two-column > .col-right {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 @media only screen and (max-width: 48rem) {

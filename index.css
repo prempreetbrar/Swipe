@@ -474,7 +474,7 @@ button:hover {
 }
 
 .hero > .col-left > .two-column {
-  margin: var(--spacing-md) 0;
+  margin: var(--spacing-md) 0 0 0;
 }
 
 .hero > .col-left > .two-column > button:nth-of-type(1) {
@@ -597,7 +597,7 @@ button:hover {
 }
 
 .why-wrapper {
-  padding: calc(var(--spacing-xl) * 3) 0;
+  padding: calc(var(--spacing-xl) * 2 + var(--spacing-md)) 0;
 }
 
 .why .card,
@@ -785,4 +785,81 @@ button:hover {
   margin-bottom: var(--spacing-md);
 
   max-width: 6.75rem;
+}
+
+@media only screen and (max-width: 71.5rem) {
+  :root {
+    /* --text-dark: black;
+  --text-grey: #adbdcc;
+  --text-light: white;
+
+  --purple-1: #6962f7;
+  --purple-2: #7000ff;
+  --blue-1: #00d4ff;
+  --primary-accent: #0a2540;
+  --primary-btn-hover: #6d7a88;
+
+  --bg-white: white;
+  --bg-light: #f7f9fc;
+
+  --standard-shadow: 0rem 0.125rem 2.5rem rgba(0, 0, 0, 0.15);
+  --standard-radius: 1.25rem;
+  --primary-gradient: linear-gradient(
+    101.33deg,
+    #08209a 0.76%,
+    #6563ff 33.33%,
+    #36c5f0 76.92%,
+    #83e2ff 96.96%
+  );
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  --standard-width: 71.5rem;
+
+  --heading-font: "Anek Telugu", sans-serif;
+  --body-font: "Roboto", sans-serif; */
+
+    --h1-size: 4rem;
+    --h1-lheight: 4.5rem;
+    --h2-size: 2.125rem;
+
+    /* --h3-lheight: 4.6875rem;
+    --h3-size: 3.125rem;
+    --h4-size: 2rem;
+    --h5-size: 1.75rem;
+    --h6-size: 1.375rem;
+    --h6-lheight: 2rem;
+    --p-size: 1.125rem;
+    --p-lheight: 1.625rem;
+    --button-size: 1rem; */
+
+    /* --subtitle-size: 1.0625rem;
+  --subtitle-lheight: 1.625rem;
+  --secondary-text-size: 0.875rem;
+  --secondary-text-lheight: 1.125rem; */
+  }
+
+  [class$="wrapper"] {
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+}
+
+@media only screen and (max-width: 53.125rem) {
+  .partners img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+}
+
+@media only screen and (max-width: 34.375rem) {
+  .partners {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

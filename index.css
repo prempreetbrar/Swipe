@@ -437,6 +437,8 @@ button:hover {
   display: flex;
   justify-content: center;
 
+  box-sizing: border-box;
+
   width: 100%;
 }
 
@@ -475,6 +477,11 @@ button:hover {
 .partners img {
   height: 3.75rem;
   place-self: center;
+}
+
+.platform-wrapper,
+.graphics-wrapper {
+  background-color: var(--bg-light);
 }
 
 .platform {
@@ -522,9 +529,30 @@ button:hover {
   grid-area: dashboard;
 }
 
+.engineers-wrapper::before,
+.global-wrapper::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--primary-accent);
+  transform: skewY(-10deg);
+}
+
 .engineers-wrapper,
 .global-wrapper {
-  background-color: var(--primary-accent);
+  position: relative;
+  z-index: 1;
+
+  padding: calc(var(--spacing-xl) * 3) 0;
+
   color: var(--text-light);
 }
 
@@ -538,6 +566,10 @@ button:hover {
   max-width: 29.375rem;
 
   border-radius: var(--standard-radius);
+}
+
+.why-wrapper {
+  padding: calc(var(--spacing-xl) * 3) 0;
 }
 
 .why .card,
@@ -557,9 +589,11 @@ button:hover {
 }
 
 .global-wrapper {
-  position: relative;
+  padding-bottom: 0;
+}
 
-  padding: calc(var(--spacing-xl) * 3);
+.global-wrapper::before {
+  height: 125%;
 }
 
 .global h3 {
@@ -570,7 +604,7 @@ button:hover {
 }
 
 .global .card-container {
-  margin-top: calc(var(--spacing-xl) * 2);
+  margin: calc(var(--spacing-xl) * 2) 0;
 }
 
 .global a {
@@ -588,6 +622,25 @@ button:hover {
   max-width: 55.25rem;
 
   opacity: 0.25;
+}
+
+.events-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.events-wrapper::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--bg-white);
 }
 
 .events {

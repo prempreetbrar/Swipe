@@ -860,8 +860,9 @@ button:hover {
   }
 
   .engineers .col-right {
-    width: 40%;
     justify-content: center;
+
+    width: 40%;
   }
 }
 
@@ -869,6 +870,17 @@ button:hover {
   .partners img {
     width: 100%;
     height: auto;
+  }
+
+  .why .card-container {
+    flex-wrap: wrap;
+  }
+
+  .why .card {
+    margin: 0;
+    padding-right: var(--spacing-lg);
+
+    width: 50%;
   }
 }
 
@@ -880,26 +892,39 @@ button:hover {
   .platform h2,
   .two-column > .col-left,
   .two-column > .col-right {
-    width: 100%;
     padding: 0;
-  }
 
-  .engineers .card-container {
-    flex-direction: column;
+    width: 100%;
   }
 
   .engineers .col-right {
     display: none;
-  }
-
-  .engineers .card {
-    width: 100%;
-    margin-top: var(--spacing-md);
   }
 }
 
 @media only screen and (max-width: 550px) {
   .partners {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .engineers .card-container {
+    flex-direction: column;
+  }
+
+  .engineers .card {
+    margin-top: var(--spacing-md);
+
+    width: 100%;
+  }
+
+  .why .card {
+    margin-bottom: var(--spacing-sm);
+    padding-right: 0;
+
+    width: 100%;
+  }
+
+  .why .card img {
+    height: 2.1875rem;
   }
 }

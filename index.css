@@ -68,7 +68,8 @@ body {
 }
 
 header,
-section {
+section,
+footer {
   box-sizing: border-box;
 
   width: 100%;
@@ -84,9 +85,53 @@ header {
 }
 
 main {
-  margin: var(--spacing-xl) 0;
+  margin: var(--spacing-xl) 0 0 0;
 
   width: 100%;
+}
+
+footer {
+  display: flex;
+}
+
+footer ul {
+  padding: 0;
+
+  list-style-type: none;
+}
+
+footer li {
+  margin-bottom: var(--spacing-md);
+}
+
+footer a {
+  color: black;
+  font-weight: normal;
+}
+
+footer a:hover {
+  color: var(--purple-1);
+  text-decoration: underline;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+
+  width: 25%;
+}
+
+footer .icon-link {
+  display: flex;
+  align-items: center;
+
+  margin: var(--spacing-sm) 0;
+}
+
+footer .icon-link img {
+  margin-right: var(--spacing-sm);
+
+  width: 1.5rem;
 }
 
 h1,
@@ -132,11 +177,16 @@ h5 {
 }
 
 h6,
+footer h3,
 .card h3 {
   font-size: var(--h6-size);
   font-weight: 500;
   letter-spacing: -0.0156rem;
   line-height: var(--h6-lheight);
+}
+
+footer h3 {
+  font-weight: 700;
 }
 
 p {
@@ -382,9 +432,12 @@ button:hover {
 .why-wrapper,
 .global-wrapper,
 .events-wrapper,
-.started-wrapper {
+.started-wrapper,
+.footer-wrapper {
   display: flex;
   justify-content: center;
+
+  width: 100%;
 }
 
 .hero p {
@@ -639,4 +692,16 @@ button:hover {
 
 .started .card-container .card {
   width: 50%;
+}
+
+.footer-wrapper {
+  padding: var(--spacing-xl) 0;
+
+  background-color: var(--bg-light);
+}
+
+#footer-logo {
+  margin-bottom: var(--spacing-md);
+
+  max-width: 6.75rem;
 }

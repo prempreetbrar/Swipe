@@ -51,6 +51,12 @@
   --secondary-text-lheight: 1.125rem;
 }
 
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -787,7 +793,7 @@ button:hover {
   max-width: 6.75rem;
 }
 
-@media only screen and (max-width: 71.5rem) {
+@media only screen and (max-width: 1144px) {
   :root {
     /* --text-dark: black;
   --text-grey: #adbdcc;
@@ -848,12 +854,25 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 53.125rem) {
+@media only screen and (max-width: 950px) {
+  .engineers .col-left {
+    width: 60%;
+  }
+
+  .engineers .col-right {
+    width: 40%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 850px) {
   .partners img {
     width: 100%;
     height: auto;
   }
+}
 
+@media only screen and (max-width: 790px) {
   .two-column {
     flex-direction: column;
   }
@@ -862,14 +881,24 @@ button:hover {
   .two-column > .col-left,
   .two-column > .col-right {
     width: 100%;
-    padding-left: 0;
+    padding: 0;
+  }
+
+  .engineers .card-container {
+    flex-direction: column;
+  }
+
+  .engineers .col-right {
+    display: none;
+  }
+
+  .engineers .card {
+    width: 100%;
+    margin-top: var(--spacing-md);
   }
 }
 
-@media only screen and (max-width: 48rem) {
-}
-
-@media only screen and (max-width: 34.375rem) {
+@media only screen and (max-width: 550px) {
   .partners {
     grid-template-columns: repeat(2, 1fr);
   }

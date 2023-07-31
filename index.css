@@ -813,18 +813,44 @@ button:hover {
 }
 
 @media only screen and (max-width: 950px) {
-  .engineers .col-left {
+  .engineers .col-left,
+  .events .col-left {
     width: 60%;
   }
 
-  .engineers .col-right {
+  .engineers .col-right,
+  .events .col-right {
     justify-content: center;
 
     width: 40%;
   }
+
+  .events .col-left {
+    padding-right: var(--spacing-lg);
+  }
+
+  .events .col-right {
+    height: 21.875rem;
+  }
+
+  .events .card-top {
+    height: 40%;
+  }
+
+  .events #swipe-sessions {
+    width: 15.625rem;
+  }
+
+  .events .card-bottom {
+    padding: var(--spacing-xl) 0 0 var(--spacing-lg);
+  }
+
+  .events .card-bottom .secondary-text {
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 767px) {
   .two-column {
     flex-direction: column;
   }
@@ -873,6 +899,10 @@ button:hover {
   .global img {
     opacity: 0.1;
   }
+
+  .events .col-right {
+    width: 75%;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -892,4 +922,18 @@ button:hover {
   .card img {
     height: 2.1875rem;
   }
+
+  .events .col-right {
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  /* .events .card-bottom .secondary-text {
+    width: 100%;
+  } */
 }
+
+/* .events #swipe-sessions {
+  width: 21.125rem;
+} */

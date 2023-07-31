@@ -483,8 +483,12 @@ button:hover {
   margin: var(--spacing-md) 0 0 0;
 }
 
-.hero > .col-left > .two-column > button:nth-of-type(1) {
+.hero button:nth-of-type(1) {
   margin-right: var(--spacing-md);
+}
+
+.hero .side-by-side-buttons {
+  display: flex;
 }
 
 .partners {
@@ -806,6 +810,16 @@ button:hover {
     --h2-size: 2.125rem;
   }
 
+  #canvas {
+    height: 53.125rem;
+  }
+
+  .hero img {
+    height: 31.25rem;
+
+    transform: translateY(-3.5rem);
+  }
+
   [class$="wrapper"] {
     padding-left: var(--spacing-lg);
     padding-right: var(--spacing-lg);
@@ -813,11 +827,13 @@ button:hover {
 }
 
 @media only screen and (max-width: 950px) {
+  .hero .col-left,
   .engineers .col-left,
   .events .col-left {
     width: 60%;
   }
 
+  .hero .col-right,
   .engineers .col-right,
   .events .col-right {
     justify-content: center;
@@ -855,6 +871,11 @@ button:hover {
 }
 
 @media only screen and (max-width: 767px) {
+  :root {
+    --h1-size: 3.4375rem;
+    --h1-lheight: 3.75rem;
+  }
+
   .two-column {
     flex-direction: column;
   }
@@ -866,6 +887,20 @@ button:hover {
     padding: 0;
 
     width: 100%;
+  }
+
+  main {
+    margin: 0;
+  }
+
+  #canvas {
+    height: 48.125rem;
+  }
+
+  .hero img {
+    height: 29.6875rem;
+
+    transform: translateY(-3rem);
   }
 
   .partners img {
@@ -898,6 +933,10 @@ button:hover {
     height: 2.6563rem;
   }
 
+  .hero.two-column {
+    flex-direction: row;
+  }
+
   .engineers .col-right {
     display: none;
   }
@@ -923,7 +962,21 @@ button:hover {
   }
 }
 
+@media only screen and (max-width: 690px) {
+  .hero .col-right {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 550px) {
+  header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  #canvas {
+    height: 46.5rem;
+  }
+
   .partners {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -783,7 +783,7 @@ button:hover {
   margin: 0;
 }
 
-.started .card-container .card {
+.started .card {
   width: 50%;
 }
 
@@ -848,6 +848,10 @@ button:hover {
   .events .card-bottom .secondary-text {
     width: 100%;
   }
+
+  .started .col-left {
+    padding-right: var(--spacing-lg);
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -871,13 +875,15 @@ button:hover {
 
   .engineers .card-container,
   .why .card-container,
-  .global .card-container {
+  .global .card-container,
+  .started .card-container {
     flex-wrap: wrap;
   }
 
   .engineers .card,
   .why .card,
-  .global .card {
+  .global .card,
+  .started .card {
     margin: 0;
     padding-right: var(--spacing-lg);
 
@@ -912,7 +918,8 @@ button:hover {
 
   .engineers .card,
   .why .card,
-  .global .card {
+  .global .card,
+  .started .card {
     /* margin-bottom: var(--spacing-sm); */
     padding: 0;
 

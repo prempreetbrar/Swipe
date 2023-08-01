@@ -20,7 +20,11 @@ try it out!** Or, watch a quick gif of me interacting with it below:
 
 ### If you want to start up the project on your local machine:
 
-1. Download the directory containing all the files in the repository. Unzip this directory. Double-click on the file called "index.html". This will open the website up in your default browser. Then, scroll around the website and enjoy!
-
+1. Download the directory containing all the files in the repository. Unzip this directory. 
 ![image](https://github.com/prempreetbrar/Swipe/assets/89614923/ddbcfdfd-0dd1-4622-92a9-7e2c6c58213a)
+
+&nbsp;
+
+2.Double-click on the file called "index.html". This will open the website up in your default browser. Then, scroll around the website and enjoy!
+
 ![image](https://github.com/prempreetbrar/Swipe/assets/89614923/34952272-d7ca-4733-a878-d9d445b56808)

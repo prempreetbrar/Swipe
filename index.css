@@ -517,6 +517,8 @@ header .hamburger .bar {
 
 .graphics img {
   width: 100%;
+
+  border-radius: var(--standard-radius);
   box-shadow: var(--standard-shadow);
 }
 
@@ -530,6 +532,8 @@ header .hamburger .bar {
 
 .graphics img:nth-of-type(3) {
   grid-area: phone;
+
+  box-shadow: none;
 }
 
 .graphics img:nth-of-type(4) {
@@ -926,7 +930,7 @@ footer .icon-link img {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 47.9375em) {
   :root {
     --h1-size: 3.4375rem;
     --h1-lheight: 3.75rem;
@@ -1069,7 +1073,7 @@ footer .icon-link img {
   }
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 43.125em) {
   .hero .col-right {
     display: none;
   }
@@ -1079,7 +1083,7 @@ footer .icon-link img {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 34.375em) {
   header {
     margin-bottom: var(--spacing-lg);
   }

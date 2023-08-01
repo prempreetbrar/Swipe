@@ -3,7 +3,7 @@
 A mockup of a payment infrastructure website made using HTML and CSS. Responsive on all screen sizes. **Click [*here*](https://prempreetbrar.github.io/Swipe/) to 
 try it out!** Or, watch a quick gif of me interacting with it below:
 
-![](name.gif)
+![](Swipe.gif)
 
 ## Features
 

@@ -513,14 +513,16 @@ header .hamburger .bar {
   display: flex;
 }
 
+.partners-wrapper {
+  margin: var(--spacing-md) 0 var(--spacing-xl) 0;
+}
+
 .partners {
   display: grid;
   row-gap: var(--spacing-lg);
   column-gap: var(--spacing-md);
   grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-template-columns: repeat(4, minmax(0, 1fr));
-
-  margin: var(--spacing-md) 0 var(--spacing-xl) 0;
 }
 
 .partners img {
@@ -530,11 +532,9 @@ header .hamburger .bar {
 
 .platform-wrapper,
 .graphics-wrapper {
-  background-color: var(--bg-light);
-}
-
-.platform {
   padding: var(--spacing-xl) 0;
+
+  background-color: var(--bg-light);
 }
 
 .platform h2 {
@@ -546,6 +546,10 @@ header .hamburger .bar {
   margin: var(--spacing-md) 0;
 }
 
+.graphics-wrapper {
+  padding: var(--spacing-lg) 0;
+}
+
 .graphics {
   display: grid;
   grid-gap: var(--spacing-lg);
@@ -553,8 +557,6 @@ header .hamburger .bar {
     "card invoice invoice"
     "phone invoice invoice"
     "phone dashboard dashboard";
-
-  padding: var(--spacing-lg) 0;
 }
 
 .graphics img {
@@ -612,7 +614,7 @@ header .hamburger .bar {
   position: relative;
   z-index: 1;
 
-  padding: calc(var(--spacing-xl) * 3) 0;
+  padding: calc(var(--spacing-xl) * 2.5) 0 calc(var(--spacing-xl) * 3) 0;
 
   color: var(--text-light);
 }
@@ -670,7 +672,7 @@ header .hamburger .bar {
 }
 
 .global .card-container {
-  margin: calc(var(--spacing-xl) * 2) 0;
+  margin: calc(var(--spacing-xl) * 2) 0 calc(var(--spacing-xl) * 1.5) 0;
 }
 
 .global a {
@@ -846,6 +848,39 @@ header .hamburger .bar {
     padding-left: var(--spacing-lg);
     padding-right: var(--spacing-lg);
   }
+
+  .partners-wrapper {
+    margin-top: var(--spacing-sm);
+  }
+
+  .platform-wrapper,
+  .graphics-wrapper {
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .engineers-wrapper {
+    padding-top: calc(var(--spacing-xl) * 2);
+  }
+
+  .why-wrapper {
+    padding-top: calc(var(--spacing-xl) * 2);
+  }
+
+  .global-wrapper {
+    padding-top: calc(var(--spacing-xl) * 2);
+  }
+
+  .global .card-container {
+    margin: calc(var(--spacing-xl) * 1.5) 0 calc(var(--spacing-xl) * 1) 0;
+  }
+
+  .events {
+    padding: calc(var(--spacing-xl) * 1.5) 0;
+  }
+
+  .started {
+    padding-top: var(--spacing-md);
+  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -972,16 +1007,57 @@ header .hamburger .bar {
     flex-direction: row;
   }
 
+  .partners-wrapper {
+    margin-top: 0;
+  }
+
+  .platform-wrapper,
+  .graphics-wrapper {
+    padding-bottom: var(--spacing-md);
+  }
+
+  .engineers-wrapper {
+    padding-top: calc(var(--spacing-xl) * 1.5);
+    padding-bottom: calc(var(--spacing-xl) * 1.5);
+  }
+
   .engineers .col-right {
     display: none;
+  }
+
+  .why-wrapper {
+    padding-top: calc(var(--spacing-xl) * 1.5);
+    padding-bottom: calc(var(--spacing-xl) * 1.5);
+  }
+
+  .global-wrapper {
+    padding-top: calc(var(--spacing-xl) * 1.5);
+  }
+
+  .global .card-container {
+    margin: calc(var(--spacing-xl)) 0 calc(var(--spacing-lg)) 0;
   }
 
   .global img {
     opacity: 0.1;
   }
 
+  .events {
+    padding: var(--spacing-xl) 0 calc(var(--spacing-xl) * 1.25) 0;
+  }
+
   .events .col-right {
-    width: 75%;
+    margin-top: calc(var(--spacing-lg) * 1.5);
+
+    width: 65%;
+  }
+
+  .started {
+    padding-bottom: var(--spacing-md);
+  }
+
+  .started .card-container {
+    margin: var(--spacing-lg) 0;
   }
 
   footer {
@@ -1000,6 +1076,10 @@ header .hamburger .bar {
 @media only screen and (max-width: 690px) {
   .hero .col-right {
     display: none;
+  }
+
+  .partners-wrapper {
+    margin-top: var(--spacing-xl);
   }
 }
 
@@ -1020,14 +1100,53 @@ header .hamburger .bar {
   .why .card,
   .global .card,
   .started .card {
-    /* margin-bottom: var(--spacing-sm); */
+    margin-bottom: var(--spacing-md);
     padding: 0;
 
     width: 100%;
   }
 
+  .started {
+    padding: 0 0;
+  }
+
+  .started .card {
+    margin-bottom: var(--spacing-lg);
+  }
+
   .card img {
     height: 2.1875rem;
+  }
+
+  .partners-wrapper {
+    margin-top: var(--spacing-xl);
+  }
+
+  .platform-wrapper,
+  .graphics-wrapper {
+    padding-top: var(--spacing-lg);
+  }
+
+  .engineers-wrapper {
+    padding-top: calc(var(--spacing-lg) * 1.5);
+    padding-bottom: calc(var(--spacing-lg) * 1.5);
+  }
+
+  .why-wrapper {
+    padding-top: calc(var(--spacing-lg) * 1.5);
+    padding-bottom: calc(var(--spacing-lg) * 1.5);
+  }
+
+  .global-wrapper {
+    padding-top: calc(var(--spacing-xl) * 1);
+  }
+
+  .global .card-container {
+    margin: calc(var(--spacing-lg)) 0 calc(var(--spacing-lg)) 0;
+  }
+
+  .events {
+    padding-top: var(--spacing-lg);
   }
 
   .events .col-right {
